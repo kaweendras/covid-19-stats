@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="assets/img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title>Corona Stats in Sri Lanka</title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    
+
+
+    <!-- Bootstrap core CSS     -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!--     Fonts and icons     -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <style>
+    .newCard{
+        
+        text-align: center;
+        
+        max-width: 1500px;
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+    }
+    .card{
+        margin-right: 50px;
+        color: aliceblue;
+        
+    }
+    @media screen and (max-width: 640px) {
+    .card{
+      width: 100%;
+  }
+
+  .subh{
+      text-align: center;
+  }
+  
+}
+</style>
+</head>
+<body>
+
+    <!-- nav bar -->
+
+    <div class="pos-f-t">
+        <div class="collapse" id="navbarToggleExternalContent">
+          <div class="bg-dark p-4">
+            <h4 class="text-white">About</h4>
+            <span class="text-muted">This was developed using the API provided by Health Promotion Bureau.</span><br>
+            <span class="text-muted"><a href="https://www.twitter.com/dear__spider"><img src="assets/img/twitter.png" alt="Go to W3Schools!" width="42" height="42" border="0"></span>
+            <span class="text-muted"><a href="https://www.linkedin.com/in/salitha-kaweendra-6b64b872/"><img src="assets/img/linkedin.png" alt="Go to W3Schools!" width="42" height="42" border="0"></span>
+            <span class="text-muted"><a href="https://www.github.com/kaweendras"><img src="assets/img/github.png" alt="Go to W3Schools!" width="42" height="42" border="0"></span><br>
+            <span class="text-muted">Salitha Kaweendra</span>
+
+            
+          </div>
+        </div>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="https://hpb.health.gov.lk/social_share/logo.png" width="50" height="50" >
+          කොරෝනා සංඛ්‍යාලේඛනය
+              </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+          
+        </nav>
+      </div>
+
+
+      
+
+
+<div>
+    <p class="subh"><div style="text-align: center;">අවසන් වරට යාවත්කාලීන වූ වේලාව :</div> <div id ="last" style="text-align: center;"><br>
+    </div></p>
+    <center>
+        <input type='button'value='English' class="btn btn-dark" style="margin-bottom: 10px;" onclick="document.location.href='index-en.html';"/>
+    </center>
+</div>
+
+
+  
+    <div class="newCard">
+        <div class="card-group">
+            <div class="card bg-primary">
+              <div class="card-body text-center">
+                <p class="card-text">
+                   <b><h4>මුළු රෝගීන් සංඛ්‍යාව</h4></b> </p>
+                   <b><h4><div id="total"></div></h4></b> </p>  
+              </div>
+            </div>
+            <div class="card bg-warning">
+              <div class="card-body text-center">
+                <b><h4>අලුතින් හඳුනාගත් රෝගීන්</h4></b> </p>
+                   <b><h4><div id="new"></div></h4></b> </p>
+              </div>
+            </div>
+            <div class="card bg-success">
+              <div class="card-body text-center">
+                <b><h4>
+                    සුවය ලැබූ මුළු රෝගීන් සංඛ්‍යාව</h4></b> </p>
+                   <b><h4><div id="rec1"></div></h4></b> </p>
+              </div>
+            </div>
+            <div class="card bg-danger">
+              <div class="card-body text-center">
+                <b><h4>මරණ සංඛ්‍යාව</h4></b> </p>
+                   <b><h4><div id="death"></div></h4></b> </p>
+              </div>
+            </div>
+            <div class="card bg-info">
+                <div class="card-body text-center">
+                  <b><h4>රෝහල්වල නිරෝධායනය වන සංඛ්‍යාව</h4></b> </p>
+                     <b><h4><div id="hospi"></div></h4></b> </p>
+                </div>
+              </div>
+          </div>
+</div>
+
+
+
+<div>
+    <p class="subh"><div style="text-align: center;">මූලාශ්‍රය :<br><a href=" https://hpb.health.gov.lk/en/api-documentation">සෞඛ්‍ය ප්‍රවර්ධන කාර්යාංශය</a>
+        </div></p>
+        <center><img src="assets/img/logo.png" alt="site logo" style="text-align:center ;"></center>
+</div>
+
+
+<script>
+        
+    fetch('https://hpb.health.gov.lk/api/get-current-statistical')
+
+    .then(response => response.json())
+    .then(coronaStats => {
+    //console.log(coronaStats.data) // Prints result from `response.json()` in getRequest
+    document.getElementById("total").innerHTML = coronaStats.data.local_total_cases; // total cases
+    document.getElementById("new").innerHTML = coronaStats.data.local_new_cases;//new cases local_new_cases
+    document.getElementById("death").innerHTML = coronaStats.data.local_deaths;//death count
+    document.getElementById("rec1").innerHTML = coronaStats.data.local_recovered;//recovered
+    document.getElementById("hospi").innerHTML = coronaStats.data.local_total_number_of_individuals_in_hospitals;//in hospitals
+    document.getElementById("last").innerHTML = coronaStats.data.update_date_time;//last update
+    })
+    .catch(error => console.error(error))
+
+
+
+   
+    
+
+    
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
