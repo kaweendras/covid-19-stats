@@ -20,6 +20,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <style>
@@ -56,11 +57,14 @@
         <div class="collapse" id="navbarToggleExternalContent">
           <div class="bg-dark p-4">
             <h4 class="text-white">About</h4>
-            <span class="text-muted">This was developed using the API provided by Health Promotion Bureau.</span><br>
-            <span class="text-muted"><a href="https://www.twitter.com/dear__spider"><img src="assets/img/twitter.png" alt="Go to W3Schools!" width="42" height="42" border="0"></span>
-            <span class="text-muted"><a href="https://www.linkedin.com/in/salitha-kaweendra-6b64b872/"><img src="assets/img/linkedin.png" alt="Go to W3Schools!" width="42" height="42" border="0"></span>
-            <span class="text-muted"><a href="https://www.github.com/kaweendras"><img src="assets/img/github.png" alt="Go to W3Schools!" width="42" height="42" border="0"></span><br>
-            <span class="text-muted">Salitha Kaweendra</span>
+            <span class="text-muted">This simple corona tracker was developed using the API provided by<a href="https://hpb.health.gov.lk/en/api-documentation"> Health Promotion Bureau.</a></span><br>
+            <span class="text-muted"><a href="https://www.twitter.com/dear__spider"><img src="assets/img/twitter.png" alt="Go to twitter!" width="42" height="42" border="0"></span>
+            <span class="text-muted"><a href="https://www.linkedin.com/in/salitha-kaweendra-6b64b872/"><img src="assets/img/linkedin.png" alt="Go to Linkedin!" width="42" height="42" border="0"></span>
+            <span class="text-muted"><a href="https://www.github.com/kaweendras"><img src="assets/img/github.png" alt="Go to Github!" width="42" height="42" border="0"></span>
+            <span class="text-muted"><a href="https://www.facebook.com/kaweendra"><img src="assets/img/fb.png" alt="Go to Facebook!" width="42" height="42" border="0"></span>
+            <span class="text-muted"><a href="https://www.instagram.com/devil.u.know"><img src="assets/img/insta.png" alt="Go to Instagram!" width="42" height="42" border="0"></span>
+            <span class="text-muted"><a href="https://medium.com/@salithak1"><img src="assets/img/medium.png" alt="Go to W3Schools!" width="42" height="42" border="0"></span><br>
+              <span class="text-muted">Salitha Kaweendra</span>
 
             
           </div>
@@ -132,41 +136,14 @@
 
 
 <div>
-    <p class="subh"><div style="text-align: center;">මූලාශ්‍රය :<br><a href=" https://hpb.health.gov.lk/en/api-documentation">සෞඛ්‍ය ප්‍රවර්ධන කාර්යාංශය</a>
-        </div></p>
-        <center><img src="assets/img/logo.png" alt="site logo" style="text-align:center ;"></center>
+  <p class="subh"><div style="text-align: center;">Source :<br><a href=" https://hpb.health.gov.lk/en/api-documentation">Health Promotion Bureau</a>
+      </div></p>
+      <center><img src="assets/img/logo.png" alt="site logo" style="text-align:center ;"><br><br>
+      <a href=""> Fork on Github <img src="assets/img/fork.png" alt="Fork" style="text-align:center ;"></a><br><h6>March 2020</h6></center>
 </div>
 
 
-<script>
-        
-    fetch('https://hpb.health.gov.lk/api/get-current-statistical')
 
-    .then(response => response.json())
-    .then(coronaStats => {
-    //console.log(coronaStats.data) // Prints result from `response.json()` in getRequest
-    document.getElementById("total").innerHTML = coronaStats.data.local_total_cases; // total cases
-    document.getElementById("new").innerHTML = coronaStats.data.local_new_cases;//new cases local_new_cases
-    document.getElementById("death").innerHTML = coronaStats.data.local_deaths;//death count
-    document.getElementById("rec1").innerHTML = coronaStats.data.local_recovered;//recovered
-    document.getElementById("hospi").innerHTML = coronaStats.data.local_total_number_of_individuals_in_hospitals;//in hospitals
-    document.getElementById("last").innerHTML = coronaStats.data.update_date_time;//last update
-    })
-    .catch(error => console.error(error))
-
-
-
-   
-    
-
-    
-
-
-
-
-
-
-</script>
 
 </body>
 </html>
